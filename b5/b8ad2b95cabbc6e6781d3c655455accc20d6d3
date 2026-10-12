@@ -1,0 +1,25 @@
+README.md
+  s_8157361d5071f3::t_df0d60173f5f2e 1-130
+assets/architecture.svg
+  s_8157361d5071f3::t_9ed922fd025c31 1-88
+assets/timeline.svg
+  s_8157361d5071f3::t_a91de1e1a41dd6 1-49
+docs/lessons.md
+  s_8157361d5071f3::t_ab2889c7a0d15a 1-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b5b8ad2b95cabbc6e6781d3c655455accc20d6d3",
+  "prompts": {},
+  "sessions": {
+    "s_8157361d5071f3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "24ce061d-c5aa-424c-b3c6-87c94cde7752",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Snehal Maheshwari <snehal.maheshwari14@gmail.com>"
+    }
+  }
+}
