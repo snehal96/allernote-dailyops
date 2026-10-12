@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" aria-labelledby="t d">
+  <title id="t">Inside the agent step</title>
+  <desc id="d">A budgeted context packet goes to an Opus planner, which writes a dated queue. Small and medium executors each work in their own git worktree. A verify gate decides whether work merges to main, to staging, or waits as a branch. A cheaper reporter model writes the summary.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7A8A7E"/></marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1F2A22; }
+    .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; }
+    .title { font-size: 22px; font-weight: 700; }
+    .sub { font-size: 13.5px; fill: #5F6B62; }
+    .h { font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #3E6B4C; }
+    .b { font-size: 15px; }
+    .s { font-size: 13px; fill: #5F6B62; }
+    .box { fill: #FFFFFF; stroke: #D9D2C1; stroke-width: 1.5; }
+    .ln { stroke: #7A8A7E; stroke-width: 2; fill: none; }
+    .flow { stroke-dasharray: 7 7; animation: f 1.4s linear infinite; }
+    @keyframes f { to { stroke-dashoffset: -14; } }
+    @media (prefers-reduced-motion: reduce) { .flow { animation: none; } }
+  </style>
+  <rect width="1000" height="680" rx="18" fill="#F7F4EC"/>
+  <text x="40" y="52" class="title">Inside the agent step</text>
+  <text x="40" y="76" class="sub">agent_orchestrator.py. Each role is a fresh headless session with its own model and a fallback provider.</text>
+
+  <!-- row A -->
+  <rect x="40" y="110" width="270" height="120" rx="14" class="box"/>
+  <text x="60" y="140" class="h">CONTEXT PACKET</text>
+  <text x="60" y="168" class="b">funnel, errors, SEO, revenue,</text>
+  <text x="60" y="190" class="b">learnings, decisions, roadmap</text>
+  <text x="60" y="214" class="s">under 50k chars, budgeted per section</text>
+
+  <rect x="365" y="110" width="270" height="120" rx="14" fill="#3E6B4C"/>
+  <text x="385" y="140" class="h" style="fill:#CFE0CC">PLANNER</text>
+  <text x="385" y="168" class="b" style="fill:#fff">Claude Opus, no tools</text>
+  <text x="385" y="190" class="b" style="fill:#fff">one session a day</text>
+  <text x="385" y="214" class="s" style="fill:#CFE0CC">fallback: Gemini Pro</text>
+
+  <rect x="690" y="110" width="270" height="120" rx="14" class="box"/>
+  <text x="710" y="140" class="h">QUEUE</text>
+  <text x="710" y="168" class="m">agent_queue.json</text>
+  <text x="710" y="190" class="b">dated and resumable</text>
+  <text x="710" y="214" class="s">a retry never pays for a second plan</text>
+
+  <line x1="314" y1="170" x2="359" y2="170" class="ln flow" marker-end="url(#a)"/>
+  <line x1="639" y1="170" x2="684" y2="170" class="ln flow" marker-end="url(#a)"/>
+
+  <!-- bus -->
+  <path d="M825,234 V266 H175 V294" class="ln" marker-end="url(#a)"/>
+  <path d="M500,266 V294" class="ln" marker-end="url(#a)"/>
+  <path d="M825,266 V294" class="ln" marker-end="url(#a)"/>
+
+  <!-- row B -->
+  <rect x="40" y="300" width="270" height="110" rx="14" class="box"/>
+  <text x="60" y="330" class="h">EXECUTOR · SMALL</text>
+  <text x="60" y="360" class="b">Gemini Flash, then Sonnet</text>
+  <text x="60" y="386" class="s">one task, its own git worktree</text>
+
+  <rect x="365" y="300" width="270" height="110" rx="14" class="box"/>
+  <text x="385" y="330" class="h">EXECUTOR · MEDIUM</text>
+  <text x="385" y="360" class="b">Claude Sonnet, then Gemini Pro</text>
+  <text x="385" y="386" class="s">one task, its own git worktree</text>
+
+  <rect x="690" y="300" width="270" height="110" rx="14" fill="#FBF1DE" stroke="#B7791F" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="710" y="330" class="h" style="fill:#8A5A12">TOO BIG FOR ONE SESSION</text>
+  <text x="710" y="360" class="b">becomes a PRD draft for you</text>
+  <text x="710" y="386" class="s">nothing in a draft gets built</text>
+
+  <!-- gate -->
+  <line x1="175" y1="414" x2="175" y2="444" class="ln" marker-end="url(#a)"/>
+  <line x1="500" y1="414" x2="500" y2="444" class="ln" marker-end="url(#a)"/>
+  <rect x="40" y="450" width="600" height="56" rx="14" fill="#1F2A22"/>
+  <text x="62" y="483"><tspan class="h" style="fill:#A9C3AE">VERIFY GATE</tspan><tspan class="b" style="fill:#F7F4EC" dx="16">real test exit codes, never_touch paths, size caps</tspan></text>
+
+  <!-- outcomes -->
+  <line x1="135" y1="510" x2="135" y2="544" class="ln" marker-end="url(#a)"/>
+  <line x1="340" y1="510" x2="340" y2="544" class="ln" marker-end="url(#a)"/>
+  <line x1="545" y1="510" x2="545" y2="544" class="ln" marker-end="url(#a)"/>
+
+  <rect x="40" y="550" width="190" height="90" rx="14" fill="#E2ECDF" stroke="#3E6B4C" stroke-width="1.5"/>
+  <text x="58" y="578" class="h">MAIN</text>
+  <text x="58" y="604" class="b">Tier 1 changes</text>
+  <text x="58" y="626" class="s">watchdog can revert</text>
+
+  <rect x="245" y="550" width="190" height="90" rx="14" class="box"/>
+  <text x="263" y="578" class="h">STAGING</text>
+  <text x="263" y="604" class="b">approved PRD slices</text>
+  <text x="263" y="626" class="s">you promote by hand</text>
+
+  <rect x="450" y="550" width="190" height="90" rx="14" fill="#FBF1DE" stroke="#B7791F" stroke-width="1.5"/>
+  <text x="468" y="578" class="h" style="fill:#8A5A12">BRANCH</text>
+  <text x="468" y="604" class="b">everything else</text>
+  <text x="468" y="626" class="s">waits for your review</text>
+
+  <!-- reporter -->
+  <line x1="644" y1="478" x2="684" y2="478" class="ln" marker-end="url(#a)"/>
+  <line x1="825" y1="414" x2="825" y2="444" class="ln" marker-end="url(#a)"/>
+  <rect x="690" y="450" width="270" height="190" rx="14" class="box"/>
+  <text x="710" y="480" class="h">REPORTER</text>
+  <text x="710" y="510" class="b">Gemini Flash, then Haiku</text>
+  <text x="710" y="534" class="b">writes up what shipped,</text>
+  <text x="710" y="556" class="b">what is blocked, and why</text>
+  <text x="710" y="592" class="s">if both providers are down, a</text>
+  <text x="710" y="612" class="s">plain-code section is written</text>
+  <text x="710" y="632" class="s">instead</text>
+</svg>

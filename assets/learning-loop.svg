@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-labelledby="t d">
+  <title id="t">Memory you can read and edit</title>
+  <desc id="d">The founder writes steering, resolves decisions, accepts roadmap bets and approves PRDs. The agent writes learnings, an action log, raises decisions and proposes roadmap items and PRDs. The daily run reads all of it before acting.</desc>
+  <defs>
+    <marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7791F"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3E6B4C"/></marker>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7A8A7E"/></marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1F2A22; }
+    .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 15px; font-weight: 700; }
+    .title { font-size: 22px; font-weight: 700; }
+    .sub { font-size: 13.5px; fill: #5F6B62; }
+    .h { font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .bb { font-size: 15px; font-weight: 700; }
+    .b { font-size: 15px; }
+    .s { font-size: 13px; fill: #5F6B62; }
+    .you { fill: #FBF1DE; stroke: #E5C690; stroke-width: 1.5; }
+    .bot { fill: #FFFFFF; stroke: #B9CDB6; stroke-width: 1.5; }
+    .flow { stroke-dasharray: 7 7; animation: f 1.4s linear infinite; }
+    @keyframes f { to { stroke-dashoffset: -14; } }
+    @media (prefers-reduced-motion: reduce) { .flow { animation: none; } }
+  </style>
+  <rect width="1000" height="600" rx="18" fill="#F7F4EC"/>
+  <text x="40" y="52" class="title">Memory you can read and edit</text>
+  <text x="40" y="76" class="sub">Plain files in the repo. The run reads all of them before it acts and writes back after.</text>
+
+  <text x="40" y="120" class="h" style="fill:#8A5A12">YOU WRITE</text>
+  <rect x="40" y="134" width="290" height="72" rx="12" class="you"/>
+  <text x="60" y="164" class="m">steering.md</text>
+  <text x="60" y="188" class="s">standing orders in plain English</text>
+  <rect x="40" y="222" width="290" height="72" rx="12" class="you"/>
+  <text x="60" y="252" class="bb">Decisions tab</text>
+  <text x="60" y="276" class="s">accept, done, dismiss or snooze</text>
+  <rect x="40" y="310" width="290" height="72" rx="12" class="you"/>
+  <text x="60" y="340" class="bb">Roadmap status</text>
+  <text x="60" y="364" class="s">accept, refine or reject a bet</text>
+  <rect x="40" y="398" width="290" height="72" rx="12" class="you"/>
+  <text x="60" y="428" class="bb">PRD review</text>
+  <text x="60" y="452" class="s">approve, answer its open questions</text>
+
+  <text x="670" y="120" class="h" style="fill:#3E6B4C">THE AGENT WRITES</text>
+  <rect x="670" y="134" width="290" height="72" rx="12" class="bot"/>
+  <text x="690" y="164" class="m">learnings.md</text>
+  <text x="690" y="188" class="s">lessons it distilled, pruned over time</text>
+  <rect x="670" y="222" width="290" height="72" rx="12" class="bot"/>
+  <text x="690" y="252" class="m">actions.jsonl</text>
+  <text x="690" y="276" class="s">append-only log of every action</text>
+  <rect x="670" y="310" width="290" height="72" rx="12" class="bot"/>
+  <text x="690" y="340" class="m">decisions.json</text>
+  <text x="690" y="364" class="s">raises items, never resolves them</text>
+  <rect x="670" y="398" width="290" height="72" rx="12" class="bot"/>
+  <text x="690" y="428" class="m">roadmap.md, prds/</text>
+  <text x="690" y="452" class="s">proposes, never accepts its own</text>
+
+  <circle cx="500" cy="305" r="100" fill="#3E6B4C"/>
+  <text x="500" y="287" text-anchor="middle" class="h" style="fill:#CFE0CC">DAILY RUN</text>
+  <text x="500" y="314" text-anchor="middle" class="b" style="fill:#FFFFFF">reads all of it</text>
+  <text x="500" y="336" text-anchor="middle" class="b" style="fill:#FFFFFF">before acting</text>
+
+  <g stroke="#B7791F" stroke-width="2" fill="none" class="flow">
+    <line x1="334" y1="170" x2="416" y2="237" marker-end="url(#am)"/>
+    <line x1="334" y1="258" x2="398" y2="276" marker-end="url(#am)"/>
+    <line x1="334" y1="346" x2="398" y2="330" marker-end="url(#am)"/>
+    <line x1="334" y1="434" x2="416" y2="370" marker-end="url(#am)"/>
+  </g>
+  <g stroke="#3E6B4C" stroke-width="2" fill="none" class="flow">
+    <line x1="580" y1="242" x2="664" y2="173" marker-end="url(#ag)"/>
+    <line x1="598" y1="278" x2="664" y2="260" marker-end="url(#ag)"/>
+    <line x1="598" y1="329" x2="664" y2="345" marker-end="url(#ag)"/>
+    <line x1="580" y1="366" x2="664" y2="430" marker-end="url(#ag)"/>
+  </g>
+
+  <path d="M815,474 C815,538 185,538 185,478" stroke="#7A8A7E" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="500" y="552" text-anchor="middle" class="b">What the agent raised reaches you in the morning email and the admin portal.</text>
+  <text x="500" y="578" text-anchor="middle" class="s">Dry runs never write memory. A decision you resolved is never raised again.</text>
+</svg>

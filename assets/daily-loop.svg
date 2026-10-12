@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="t d">
+  <title id="t">One run, every morning</title>
+  <desc id="d">Eight steps: trigger, guards, sense, baseline report, outreach, agents, email report, and the founder's decisions, which feed the next day's run.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7A8A7E"/></marker>
+    <marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B7791F"/></marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1F2A22; }
+    .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; }
+    .title { font-size: 22px; font-weight: 700; }
+    .sub { font-size: 13.5px; fill: #5F6B62; }
+    .h { font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #3E6B4C; }
+    .b { font-size: 15px; }
+    .s { font-size: 13px; fill: #5F6B62; }
+    .w { fill: #FFFFFF; }
+    .box { fill: #FFFFFF; stroke: #D9D2C1; stroke-width: 1.5; }
+    .num { fill: #3E6B4C; }
+    .nt { font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+    .ln { stroke: #7A8A7E; stroke-width: 2; fill: none; }
+    .chip { fill: #E2ECDF; }
+    .flow { stroke-dasharray: 7 7; animation: f 1.4s linear infinite; }
+    @keyframes f { to { stroke-dashoffset: -14; } }
+    @media (prefers-reduced-motion: reduce) { .flow { animation: none; } }
+  </style>
+  <rect width="1000" height="560" rx="18" fill="#F7F4EC"/>
+  <text x="40" y="52" class="title">One run, every morning</text>
+  <text x="40" y="76" class="sub">run.sh, fired by a systemd timer. Deterministic steps go first, so a report always goes out.</text>
+
+  <!-- row 1 -->
+  <rect x="40" y="100" width="200" height="110" rx="14" class="box"/>
+  <circle cx="66" cy="128" r="13" class="num"/><text x="66" y="132.5" text-anchor="middle" class="nt">1</text>
+  <text x="88" y="132.5" class="h">TRIGGER</text>
+  <text x="60" y="166" class="b">systemd timer</text>
+  <text x="60" y="190" class="s">10:00, runs once a day</text>
+
+  <rect x="280" y="100" width="200" height="110" rx="14" class="box"/>
+  <circle cx="306" cy="128" r="13" class="num"/><text x="306" y="132.5" text-anchor="middle" class="nt">2</text>
+  <text x="328" y="132.5" class="h">GUARDS</text>
+  <text x="300" y="166" class="b">kill switch file</text>
+  <text x="300" y="190" class="s">run-once marker, network wait</text>
+
+  <rect x="520" y="100" width="200" height="110" rx="14" class="box"/>
+  <circle cx="546" cy="128" r="13" class="num"/><text x="546" y="132.5" text-anchor="middle" class="nt">3</text>
+  <text x="568" y="132.5" class="h">SENSE</text>
+  <text x="540" y="166" class="b">11 collectors</text>
+  <text x="540" y="190" class="m" fill="#5F6B62">out/&lt;date&gt;/*.json</text>
+
+  <rect x="760" y="100" width="200" height="110" rx="14" class="box"/>
+  <circle cx="786" cy="128" r="13" class="num"/><text x="786" y="132.5" text-anchor="middle" class="nt">4</text>
+  <text x="808" y="132.5" class="h">BASELINE REPORT</text>
+  <text x="780" y="166" class="b">plain-code digest</text>
+  <text x="780" y="190" class="s">needs no LLM at all</text>
+
+  <line x1="244" y1="155" x2="274" y2="155" class="ln" marker-end="url(#a)"/>
+  <line x1="484" y1="155" x2="514" y2="155" class="ln" marker-end="url(#a)"/>
+  <line x1="724" y1="155" x2="754" y2="155" class="ln" marker-end="url(#a)"/>
+  <line x1="860" y1="214" x2="860" y2="324" class="ln" marker-end="url(#a)"/>
+
+  <!-- row 2, right to left -->
+  <rect x="760" y="330" width="200" height="110" rx="14" class="box"/>
+  <circle cx="786" cy="358" r="13" class="num"/><text x="786" y="362.5" text-anchor="middle" class="nt">5</text>
+  <text x="808" y="362.5" class="h">OUTREACH</text>
+  <text x="780" y="396" class="b">capped B2B email</text>
+  <text x="780" y="420" class="s">two switches must be on</text>
+
+  <rect x="520" y="330" width="200" height="110" rx="14" fill="#3E6B4C"/>
+  <circle cx="546" cy="358" r="13" fill="#F7F4EC"/><text x="546" y="362.5" text-anchor="middle" class="nt" style="fill:#3E6B4C">6</text>
+  <text x="568" y="362.5" class="h" style="fill:#CFE0CC">AGENTS</text>
+  <text x="540" y="396" class="b w">plan, build, verify</text>
+  <text x="540" y="420" class="s" style="fill:#CFE0CC">see the next diagram</text>
+
+  <rect x="280" y="330" width="200" height="110" rx="14" class="box"/>
+  <circle cx="306" cy="358" r="13" class="num"/><text x="306" y="362.5" text-anchor="middle" class="nt">7</text>
+  <text x="328" y="362.5" class="h">EMAIL REPORT</text>
+  <text x="300" y="396" class="b">"Needs you" first</text>
+  <text x="300" y="420" class="s">DM drafts attached</text>
+
+  <rect x="40" y="330" width="200" height="110" rx="14" fill="#FBF1DE" stroke="#B7791F" stroke-width="2"/>
+  <circle cx="66" cy="358" r="13" fill="#B7791F"/><text x="66" y="362.5" text-anchor="middle" class="nt">8</text>
+  <text x="88" y="362.5" class="h" style="fill:#8A5A12">YOU</text>
+  <text x="60" y="396" class="b">approve, reject, snooze</text>
+  <text x="60" y="420" class="s">in the admin portal</text>
+
+  <line x1="756" y1="385" x2="726" y2="385" class="ln" marker-end="url(#a)"/>
+  <line x1="516" y1="385" x2="486" y2="385" class="ln" marker-end="url(#a)"/>
+  <line x1="276" y1="385" x2="246" y2="385" class="ln" marker-end="url(#a)"/>
+
+  <!-- feedback -->
+  <line x1="140" y1="326" x2="140" y2="218" stroke="#B7791F" stroke-width="2.5" class="flow" marker-end="url(#am)"/>
+  <text x="158" y="262" class="b" style="fill:#8A5A12">your decisions become</text>
+  <text x="158" y="284" class="b" style="fill:#8A5A12">tomorrow's context</text>
+
+  <rect x="392" y="248" width="400" height="40" rx="20" fill="none" stroke="#BFB6A2" stroke-dasharray="5 5"/>
+  <text x="592" y="273" text-anchor="middle" class="s">Afternoon: a separate job renders one new reel</text>
+
+  <!-- signals -->
+  <text x="40" y="484" class="h">SIGNALS READ EACH MORNING</text>
+  <g class="s">
+    <rect x="40" y="498" width="89" height="30" rx="15" class="chip"/><text x="84.5" y="518" text-anchor="middle">Admin API</text>
+    <rect x="136" y="498" width="74" height="30" rx="15" class="chip"/><text x="173" y="518" text-anchor="middle">PostHog</text>
+    <rect x="217" y="498" width="125" height="30" rx="15" class="chip"/><text x="279.5" y="518" text-anchor="middle">Search Console</text>
+    <rect x="349" y="498" width="46" height="30" rx="15" class="chip"/><text x="372" y="518" text-anchor="middle">GA4</text>
+    <rect x="402" y="498" width="67" height="30" rx="15" class="chip"/><text x="435.5" y="518" text-anchor="middle">Sentry</text>
+    <rect x="476" y="498" width="74" height="30" rx="15" class="chip"/><text x="513" y="518" text-anchor="middle">Deploys</text>
+    <rect x="557" y="498" width="74" height="30" rx="15" class="chip"/><text x="594" y="518" text-anchor="middle">Revenue</text>
+    <rect x="638" y="498" width="67" height="30" rx="15" class="chip"/><text x="671.5" y="518" text-anchor="middle">Funnel</text>
+    <rect x="712" y="498" width="74" height="30" rx="15" class="chip"/><text x="749" y="518" text-anchor="middle">Content</text>
+    <rect x="793" y="498" width="67" height="30" rx="15" class="chip"/><text x="826.5" y="518" text-anchor="middle">Social</text>
+    <rect x="867" y="498" width="93" height="30" rx="15" class="chip"/><text x="913.5" y="518" text-anchor="middle">Lab health</text>
+  </g>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="630" viewBox="0 0 1000 630" role="img" aria-labelledby="t d">
+  <title id="t">Where it runs</title>
+  <desc id="d">One VPS running Docker Compose: Caddy in front of frontend, backend, admin and staging containers, a self-hosted Postgres, a deploy webhook, and nine systemd timers. Outside services: GitHub, Gemini, Claude, PostHog, Sentry, Search Console, GA4 and SMTP.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7A8A7E"/></marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1F2A22; }
+    .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .title { font-size: 22px; font-weight: 700; }
+    .sub { font-size: 13.5px; fill: #5F6B62; }
+    .h { font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #3E6B4C; }
+    .bb { font-size: 15px; font-weight: 700; }
+    .b { font-size: 15px; }
+    .s { font-size: 13px; fill: #5F6B62; }
+    .box { fill: #FFFFFF; stroke: #D9D2C1; stroke-width: 1.5; }
+    .chip { fill: #E2ECDF; }
+    .ln { stroke: #7A8A7E; stroke-width: 2; fill: none; }
+    .flow { stroke-dasharray: 7 7; animation: f 1.4s linear infinite; }
+    @keyframes f { to { stroke-dashoffset: -14; } }
+    @media (prefers-reduced-motion: reduce) { .flow { animation: none; } }
+  </style>
+  <rect width="1000" height="630" rx="18" fill="#F7F4EC"/>
+  <text x="40" y="52" class="title">Where it runs</text>
+  <text x="40" y="76" class="sub">Production, staging, the agents and every scheduled job share one VPS on Docker Compose.</text>
+
+  <rect x="40" y="96" width="620" height="40" rx="20" fill="#E2ECDF"/>
+  <text x="350" y="121" text-anchor="middle" class="b">Visitors, search crawlers, AI assistants</text>
+  <line x1="350" y1="136" x2="350" y2="202" class="ln flow" marker-end="url(#a)"/>
+
+  <rect x="40" y="168" width="620" height="440" rx="16" fill="#FBFAF6" stroke="#BFB6A2" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="60" y="192" class="h" style="fill:#7A8A7E">ONE VPS · DOCKER COMPOSE</text>
+
+  <rect x="60" y="206" width="580" height="40" rx="10" fill="#1F2A22"/>
+  <text x="80" y="231"><tspan class="bb" style="fill:#F7F4EC">Caddy</tspan><tspan class="s" style="fill:#A9C3AE" dx="10">TLS and routing</tspan></text>
+
+  <line x1="126.5" y1="246" x2="126.5" y2="266" class="ln" marker-end="url(#a)"/>
+  <line x1="275.5" y1="246" x2="275.5" y2="266" class="ln" marker-end="url(#a)"/>
+  <line x1="424.5" y1="246" x2="424.5" y2="266" class="ln" marker-end="url(#a)"/>
+  <line x1="573.5" y1="246" x2="573.5" y2="266" class="ln" marker-end="url(#a)"/>
+
+  <rect x="60" y="270" width="133" height="74" rx="12" class="box"/>
+  <text x="76" y="300" class="bb">frontend</text><text x="76" y="324" class="s">Nuxt, SSR</text>
+  <rect x="209" y="270" width="133" height="74" rx="12" class="box"/>
+  <text x="225" y="300" class="bb">backend</text><text x="225" y="324" class="s">FastAPI</text>
+  <rect x="358" y="270" width="133" height="74" rx="12" class="box"/>
+  <text x="374" y="300" class="bb">admin</text><text x="374" y="324" class="s">private FastAPI</text>
+  <rect x="507" y="270" width="133" height="74" rx="12" class="box"/>
+  <text x="523" y="300" class="bb">staging</text><text x="523" y="324" class="s">own FE, BE, DB</text>
+
+  <line x1="275.5" y1="344" x2="275.5" y2="364" class="ln" marker-end="url(#a)"/>
+  <line x1="424.5" y1="344" x2="424.5" y2="364" class="ln" marker-end="url(#a)"/>
+  <rect x="60" y="368" width="431" height="44" rx="10" fill="#E2ECDF"/>
+  <text x="275.5" y="395" text-anchor="middle" class="bb">PostgreSQL, self-hosted</text>
+
+  <rect x="507" y="368" width="133" height="44" rx="10" class="box"/>
+  <text x="573.5" y="386" text-anchor="middle" class="s" style="fill:#1F2A22;font-weight:700">deploy webhook</text>
+  <text x="573.5" y="403" text-anchor="middle" class="s">pull and rebuild</text>
+
+  <text x="60" y="450" class="h">SYSTEMD TIMERS</text>
+  <g class="s">
+    <rect x="60" y="464" width="182" height="30" rx="15" fill="#3E6B4C"/><text x="151" y="484" text-anchor="middle" style="fill:#fff;font-weight:700">dailyops · 10:00</text>
+    <rect x="259" y="464" width="182" height="30" rx="15" class="chip"/><text x="350" y="484" text-anchor="middle">content · afternoon</text>
+    <rect x="458" y="464" width="182" height="30" rx="15" class="chip"/><text x="549" y="484" text-anchor="middle">market radar · weekly</text>
+    <rect x="60" y="504" width="182" height="30" rx="15" class="chip"/><text x="151" y="524" text-anchor="middle">compliance · monthly</text>
+    <rect x="259" y="504" width="182" height="30" rx="15" class="chip"/><text x="350" y="524" text-anchor="middle">sentry alert · 10 min</text>
+    <rect x="458" y="504" width="182" height="30" rx="15" class="chip"/><text x="549" y="524" text-anchor="middle">watchdog · 5 min</text>
+    <rect x="60" y="544" width="182" height="30" rx="15" class="chip"/><text x="151" y="564" text-anchor="middle">backup · daily</text>
+    <rect x="259" y="544" width="182" height="30" rx="15" class="chip"/><text x="350" y="564" text-anchor="middle">db cleanup · daily</text>
+    <rect x="458" y="544" width="182" height="30" rx="15" class="chip"/><text x="549" y="564" text-anchor="middle">autoposter · daily</text>
+  </g>
+
+  <text x="700" y="190" class="h" style="fill:#7A8A7E">OUTSIDE THE BOX</text>
+  <rect x="700" y="206" width="260" height="56" rx="12" class="box"/>
+  <text x="718" y="229" class="bb">GitHub</text><text x="718" y="250" class="s">a push to main hits the webhook</text>
+  <rect x="700" y="274" width="260" height="56" rx="12" class="box"/>
+  <text x="718" y="297" class="bb">Gemini</text><text x="718" y="318" class="s">label scans and the AllerBot chat</text>
+  <rect x="700" y="342" width="260" height="56" rx="12" fill="#E2ECDF" stroke="#3E6B4C" stroke-width="1.5"/>
+  <text x="718" y="365" class="bb">Claude + Gemini</text><text x="718" y="386" class="s">headless agent sessions</text>
+  <rect x="700" y="410" width="260" height="56" rx="12" class="box"/>
+  <text x="718" y="433" class="bb">PostHog, Sentry</text><text x="718" y="454" class="s">product and error signals</text>
+  <rect x="700" y="478" width="260" height="56" rx="12" class="box"/>
+  <text x="718" y="501" class="bb">Search Console, GA4</text><text x="718" y="522" class="s">search signals</text>
+  <rect x="700" y="546" width="260" height="56" rx="12" class="box"/>
+  <text x="718" y="569" class="bb">SMTP</text><text x="718" y="590" class="s">reports, alerts, outreach</text>
+
+  <path d="M696,234 H676 V390 H646" class="ln flow" marker-end="url(#a)"/>
+</svg>

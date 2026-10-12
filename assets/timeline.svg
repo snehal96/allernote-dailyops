@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="250" viewBox="0 0 1000 250" role="img" aria-labelledby="t d">
+  <title id="t">2026 so far</title>
+  <desc id="d">January first commit, February public beta, March free tools and pricing, April AllerBot chat, May catalog and encyclopedia, June Lab and video engine, July DailyOps goes live, August stack moves to one VPS, September auto-merge, PRDs and staging, October today.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #1F2A22; }
+    .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11.5px; fill: #7A8A7E; letter-spacing: .06em; }
+    .title { font-size: 22px; font-weight: 700; }
+    .e { font-size: 14px; }
+    .hi { font-size: 14px; font-weight: 700; fill: #3E6B4C; }
+  </style>
+  <rect width="1000" height="250" rx="18" fill="#F7F4EC"/>
+  <text x="40" y="46" class="title">2026 so far</text>
+
+  <line x1="60" y1="140" x2="940" y2="140" stroke="#B9CDB6" stroke-width="3" stroke-linecap="round"/>
+  <line x1="60" y1="140" x2="940" y2="140" stroke="#3E6B4C" stroke-width="3" stroke-linecap="round"/>
+
+  <g fill="#3E6B4C">
+    <circle cx="60" cy="140" r="6"/><circle cx="158" cy="140" r="6"/><circle cx="256" cy="140" r="6"/>
+    <circle cx="353" cy="140" r="6"/><circle cx="451" cy="140" r="6"/><circle cx="549" cy="140" r="6"/>
+  </g>
+  <circle cx="647" cy="140" r="14" fill="none" stroke="#E8B04A" stroke-width="2"/>
+  <circle cx="647" cy="140" r="8" fill="#E8B04A"/>
+  <g fill="#3E6B4C">
+    <circle cx="744" cy="140" r="6"/><circle cx="842" cy="140" r="6"/>
+  </g>
+  <circle cx="940" cy="140" r="6" fill="#F7F4EC" stroke="#3E6B4C" stroke-width="2"/>
+
+  <g text-anchor="middle" class="m">
+    <text x="60" y="166">JAN</text><text x="158" y="166">FEB</text><text x="256" y="166">MAR</text>
+    <text x="353" y="166">APR</text><text x="451" y="166">MAY</text><text x="549" y="166">JUN</text>
+    <text x="647" y="170">JUL</text><text x="744" y="166">AUG</text><text x="842" y="166">SEP</text>
+    <text x="940" y="166">OCT</text>
+  </g>
+
+  <g text-anchor="middle" class="e">
+    <text x="60" y="120">First commit</text>
+    <text x="256" y="102">Free tools</text><text x="256" y="120">and pricing</text>
+    <text x="451" y="102">Catalog and</text><text x="451" y="120">encyclopedia</text>
+    <text x="744" y="102">Stack moves</text><text x="744" y="120">to one VPS</text>
+    <text x="940" y="120">Today</text>
+
+    <text x="158" y="194">Public beta</text>
+    <text x="353" y="194">AllerBot</text><text x="353" y="212">chat assistant</text>
+    <text x="549" y="194">Lab and</text><text x="549" y="212">video engine</text>
+    <text x="842" y="194">Auto-merge,</text><text x="842" y="212">PRDs, staging</text>
+  </g>
+  <text x="647" y="102" text-anchor="middle" class="hi">DailyOps</text>
+  <text x="647" y="120" text-anchor="middle" class="hi">goes live</text>
+</svg>
